@@ -1,0 +1,142 @@
+nav {
+	width: 100%;
+	padding: 0;
+    background-color: #333333;
+    height: 50;
+    position: fixed;
+}
+
+img {
+    position: absolute;
+    padding: 10px 20px 20px 10%;
+    z-index: 1;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
+
+li {
+    display: inline;
+    list-style: none;
+    padding: 0 10px;
+   
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 15px 0 20px 70%;
+}
+
+h1 {
+    color: green;
+    font-family: 'Dosis', sans-serif;
+    font-size: 50px;
+    padding: 80px 0 0 0;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    color: lawngreen;
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
+h4  {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 30px;
+    font-family: fantasy;
+    color: darkmagenta;
+}
+
+h6 {
+    font-size: 30px;
+    color: tomato;
+}
+
+h7 {
+    font-size: 30px;
+    color: peru;
+}
+
+h8 {
+    font-size: 30px;
+    color: chocolate;
+}
+
+h9 {
+    font-size: 30px;
+    color: blueviolet;
+}
+
+h10 {
+    font-size: 30px;
+    color: blue;
+}
+
+.lines {
+    text-align: center;
+    padding: 50px 0 50px 0;
+    
+}
+.firstParagraph {
+    font-family: courier;
+}
+
+.secondParagraph {
+    font-family: consolas;
+}
+
+.thirdParagraph {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.forthParagraph {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fifhtParagraph {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+sixthtParagraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.seventhParagraph {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.eighthParagraph {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-image: url(topography.png);
+    margin: 0;
+}
+
+main {
+    padding: 10px 10%;
+}
+
