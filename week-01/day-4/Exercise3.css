@@ -1,0 +1,33 @@
+p {
+    width: 348px;
+    height: 88px;
+    border: 16px rgb(66, 133, 244);;
+    border-style: solid;
+    text-align: center;
+    padding-top: 45px;
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin :0;
+    color: white;
+}
+
+p:nth-child(1) {
+    background-color: rgb(230,118,118);
+    border-bottom: 0;
+}
+
+p:nth-child(2) {
+    background-color: rgb(230,118,118);
+    border-top: 0;
+    margin-bottom: 5px;
+}
+
+p:nth-child(3) {
+    background-color: rgb(169,230,230);
+    border-bottom: 0;
+}
+
+p:nth-child(4) {
+    border-top: 0;
+    background-color: rgb(169,230,230);
+}
