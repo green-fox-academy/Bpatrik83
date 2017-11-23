@@ -1,0 +1,36 @@
+p {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 14px;
+}
+
+.first {
+    border: 2px green;
+    border-style: solid;
+    width: fit-content;
+}
+
+    .first :first-child, .second :first-child {
+        margin-left: 24px;
+    }
+
+    .first :last-child, .second :last-child {
+        margin-right: 24px;
+    }
+
+    .first p {
+        background-color: rgb(66, 133, 244);
+    }
+
+.second {
+    margin-top: 12px;
+    border: 2px green;
+    border-style: solid;
+    width: fit-content;
+    background-color:  rgb(255, 99, 71);
+}
+
+    .second p {
+        background-color: rgb(100, 53, 121);
+    }
