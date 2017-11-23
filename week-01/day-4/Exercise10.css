@@ -1,0 +1,38 @@
+body :nth-child(1) {
+    font-family: Courier New, Courier, monospace;
+    color: white;
+    padding: 20px 50px 20px 50px;
+    width: 204px;
+    text-align: center;
+    background-color:  rgb(255, 99, 71);
+    background-image: url(duck.png);
+    background-size: 23%;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+body :nth-child(2) {
+    font-family: Courier New, Courier, monospace;
+    color: white;
+    padding: 20px 50px 20px 50px;
+    width: 204px;
+    text-align: center;
+    background-color:  rgb(100, 53, 121);
+    background-image: url(duck.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body :nth-child(3) {
+    font-family: Courier New, Courier, monospace;
+    color: white;
+    padding: 20px 50px 20px 50px;
+    width: 204px;
+    text-align: center;
+    background-color:  rgb(128, 128, 128);
+    background-image: url(duck.png);
+    background-size: 23%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
