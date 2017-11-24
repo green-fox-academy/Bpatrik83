@@ -5,13 +5,13 @@ form {
     background-color: rgb(220, 214, 205);
     width: 623px;
     height: 782px;
-    margin: 12px 100px 12px 100px;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     border: 0px rgb(220, 214, 205);
     box-sizing: border-box;
 }
 
-div.first {
+.first {
     display: inline-block;
     margin: 13px 13px 0 13px;
     padding: 10px 0 0 10px;
@@ -27,7 +27,7 @@ div.first {
     margin-top: 0px;
     float: right;
     padding-left: 13px;
-    height: 410px;
+    height: 360px;
     width: 50%;
     box-sizing: border-box;
 }
@@ -36,7 +36,7 @@ div.bigleft {
     padding-left: 13px;
     margin-top: 0px;
     float: left;
-    height: 410px;
+    height: 360px;
     width: 50%;
     box-sizing: border-box;
 }
@@ -63,21 +63,25 @@ div.black3 {
     font-size: 12px;
 }
 
-div.last {
-    margin-top: 480px;
+.last {
+    margin-top: 4px;
     margin-left: 13px;
-   
+    display: inline-block;
+    height: 150px;
+    width: 500px;
     box-sizing: border-box;
 }
 
 body {
     background-color: white;
+    margin: auto;
 }
 
 h1 {
-    font-size: 22px;
-    margin-top: 10px;
-    margin-left: 10px;
+    font-size: 16px;
+    margin: 0 0 0 13px;
+    color: rgb(76, 66, 97);
+    padding-top: 15px;
 }
 
 input[type="tel"], input[type="email"], input[type="url"], select[name="select"], input[type="text"] {
@@ -87,45 +91,55 @@ input[type="tel"], input[type="email"], input[type="url"], select[name="select"]
     border: 1px rgb(147, 140, 151) solid;
     border-radius: 2px;
     font-size: 12px;
-    line-height: 30px;
 }
-label[for="tel"], label[for="url"], label[for="email"], label[for="text"], label[for="mark"], select {
+
+label[for="tel"], label[for="url"], label[for="email"], 
+label[for="text"], label[for="mark"], label[for="bemutatkozas"], select {
     font-size: 12px;
     font-weight: bold;
     color: rgb(76, 66, 97);
 }
 
 input[id="born"] {
-    width: 120px;
+    width: 50px;
     height: 15px;
 }
 
 label[for="textgirl"], label[for="textboy"] {
+    display: inline-block;
     font-size: 12px;
-    margin-left: 5px;
-    margin-top: 13px;
+    margin: 0 25px 0 0;
+    color: rgb(76, 66, 97);
+}
+
+label[for="textboy"] {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 0 0 0;
     color: rgb(76, 66, 97);
 }
 
 input[type="radio"] {
-    margin-top: 6px;
+    display: inline-block;
+    margin: 16px 0 0 0;
 }
 
 .checkbox2 {
    display: inline-block;
-   margin-top: 32px;
+   margin-top: 39px;
    font-size: 12px;
    color: rgb(76, 66, 97);
 }
 
 .checkbox1 {
    float: left;
-   margin-top: 13px;
+   margin-top: 20px;
    font-size: 12px;
    color: rgb(76, 66, 97);
 }
 
 .choose {
+    margin-top: 13px;
     font-size: 10px;
     color: rgb(147, 140, 151);
 }
@@ -137,4 +151,52 @@ input[type="radio"] {
 input[id="bemutat"] {
     width: 575px;
     height: 100px;
+    border: 1px rgb(76, 66, 97) solid;
+    border-radius: 2px;
+}
+
+label[name="cv"] {
+    margin: 8px 0 0 13px;
+}
+
+#filechoose {
+    background-color: rgb(247, 247, 247);
+    border-radius: 2px;
+    margin: 0 0 0 13px;
+    border: 1px rgb(76, 66, 97) solid;
+    width: 170px;
+    height: 30px;
+    font-size: 10px;
+}
+
+.feltetel {
+    margin: 20px 0 0 10px;
+    font-size: 10px;
+    color: rgb(76, 66, 97);
+}
+
+.ifline {
+    color: rgb(147, 140, 151);
+    text-decoration-line: underline;
+}
+
+.save {
+    width: 170px;
+    height: 37px;
+    margin: 20px 0 0 13px;
+    background-color: rgb(76, 66, 97);
+    border: none;
+    color:  rgb(220, 214, 205);
+    font-size: 14px;
+    display: inline-block;
+}
+
+.delete {
+    background-color: rgb(247, 247, 247);
+    border-radius: 2px;
+    margin: 0 0 0 274px;
+    border: 1px rgb(76, 66, 97) solid;
+    width: 150px;
+    height: 37px;
+    font-size: 14px;
 }
