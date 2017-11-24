@@ -1,44 +1,88 @@
-* {
-    padding: 0;
-    margin:  0;
-}
-
 form {
-    /* background-color: rgb(220, 214, 205); */
-    background-color:  green;
+    background-color: rgb(220, 214, 205);
     width: 623px;
     height: 782px;
     margin: 12px 100px 12px 100px;
-    /* box-sizing: border-box; */
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px green solid;
+    border: 0px rgb(220, 214, 205);
+    box-sizing: border-box;
 }
 
-form :first-child {
+div.first {
+    margin-top: 13px;
     border: 13px red solid;
-    height: 15px;
+    height: 43px;
     background-color: yellow;
+    box-sizing: border-box;
 }
 
-form :nth-child(2) {
-    display: inline-block;
-    border: 13px red solid;
-    height: 410px;
-    background-color: yellow;
-    width: 250px;
-}
-
-form :nth-child(3) {
-    display: inline-block;
+ div.bigright {
+    margin-top: 20px;
+    float: right;
     border: 13px red solid;
     height: 410px;
     background-color: yellow;
-    width: 50px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+div.bigleft {
+    margin-top: 20px;
+    float: left;
+    border: 13px red solid;
+    height: 410px;
+    background-color: yellow;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+div.black {
+    margin: 100px 0 0 0;
+    float: left;
+    border: 2px black solid;
+    background-color: yellow;
+    height: 42px;
+    width: 138px;
+}
+
+div.black2 {
+    margin: 100px 0 0 0;
+    float: right;
+    border: 2px black solid;
+    background-color: yellow;
+    height: 42px;
+    width: 138px;
+}
+
+div.black3 {
+    margin: 37px 0 0 0;
+    display: inline-block;
+    border: 2px black solid;
+    background-color: yellow;
+    height: 147px;
+    width: 99%;
+}
+
+div.last {
+    margin-top: 480px;
+    border: 13px red solid;
+    height: 158px;
+    background-color: yellow;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(220, 214, 205);
+    background-color: white;
 }
+
+h1 {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 
 
 
