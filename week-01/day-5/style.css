@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin:  0;
+}
+
+form {
+    /* background-color: rgb(220, 214, 205); */
+    background-color:  green;
+    width: 623px;
+    height: 782px;
+    margin: 12px 100px 12px 100px;
+    /* box-sizing: border-box; */
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px green solid;
+}
+
+form :first-child {
+    border: 13px red solid;
+    height: 15px;
+    background-color: yellow;
+}
+
+form :nth-child(2) {
+    display: inline-block;
+    border: 13px red solid;
+    height: 410px;
+    background-color: yellow;
+    width: 250px;
+}
+
+form :nth-child(3) {
+    display: inline-block;
+    border: 13px red solid;
+    height: 410px;
+    background-color: yellow;
+    width: 50px;
+}
+
+body {
+    background-color: rgb(220, 214, 205);
+}
+
+
+
