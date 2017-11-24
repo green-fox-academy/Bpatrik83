@@ -1,3 +1,6 @@
+* {
+    font-family:  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 form {
     background-color: rgb(220, 214, 205);
     width: 623px;
@@ -9,65 +12,61 @@ form {
 }
 
 div.first {
-    margin-top: 13px;
-    border: 13px red solid;
+    display: inline-block;
+    margin: 13px 13px 0 13px;
+    padding: 10px 0 0 10px;
+    border-radius: 2px;
     height: 43px;
-    background-color: yellow;
+    background-color: rgb(147, 140, 151);
     box-sizing: border-box;
+    width: 285px;
+    color: white;
 }
 
  div.bigright {
-    margin-top: 20px;
+    margin-top: 0px;
     float: right;
-    border: 13px red solid;
+    padding-left: 13px;
     height: 410px;
-    background-color: yellow;
     width: 50%;
     box-sizing: border-box;
 }
 
 div.bigleft {
-    margin-top: 20px;
+    padding-left: 13px;
+    margin-top: 0px;
     float: left;
-    border: 13px red solid;
     height: 410px;
-    background-color: yellow;
     width: 50%;
     box-sizing: border-box;
 }
 
 div.black {
-    margin: 100px 0 0 0;
+    margin: 0;
     float: left;
-    border: 2px black solid;
-    background-color: yellow;
     height: 42px;
     width: 138px;
 }
 
 div.black2 {
-    margin: 100px 0 0 0;
+    margin: 0;
     float: right;
-    border: 2px black solid;
-    background-color: yellow;
     height: 42px;
     width: 138px;
 }
 
 div.black3 {
-    margin: 37px 0 0 0;
+    margin: 10px 0 0 0;
     display: inline-block;
-    border: 2px black solid;
-    background-color: yellow;
     height: 147px;
     width: 99%;
+    font-size: 12px;
 }
 
 div.last {
     margin-top: 480px;
-    border: 13px red solid;
-    height: 158px;
-    background-color: yellow;
+    margin-left: 13px;
+   
     box-sizing: border-box;
 }
 
@@ -76,13 +75,66 @@ body {
 }
 
 h1 {
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     margin-top: 10px;
     margin-left: 10px;
 }
 
+input[type="tel"], input[type="email"], input[type="url"], select[name="select"], input[type="text"] {
+    padding: 10px;
+    width: 264px;
+    height: 15px;
+    border: 1px rgb(147, 140, 151) solid;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 30px;
+}
+label[for="tel"], label[for="url"], label[for="email"], label[for="text"], label[for="mark"], select {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(76, 66, 97);
+}
 
+input[id="born"] {
+    width: 120px;
+    height: 15px;
+}
 
+label[for="textgirl"], label[for="textboy"] {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 13px;
+    color: rgb(76, 66, 97);
+}
 
+input[type="radio"] {
+    margin-top: 6px;
+}
+
+.checkbox2 {
+   display: inline-block;
+   margin-top: 32px;
+   font-size: 12px;
+   color: rgb(76, 66, 97);
+}
+
+.checkbox1 {
+   float: left;
+   margin-top: 13px;
+   font-size: 12px;
+   color: rgb(76, 66, 97);
+}
+
+.choose {
+    font-size: 10px;
+    color: rgb(147, 140, 151);
+}
+
+.star {
+    color: red;
+}
+
+input[id="bemutat"] {
+    width: 575px;
+    height: 100px;
+}
