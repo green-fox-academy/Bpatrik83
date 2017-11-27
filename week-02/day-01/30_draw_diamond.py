@@ -12,8 +12,11 @@
 #
 # The diamond should have as many lines as the number was
 
-num = input("Enter a number: ")
-num = int(num)
+num = int(input("Enter a number: "))
+
+while num % 2 == 0:
+    num = int(input("Enter an odd number: "))
+
 str = "*" * num * 2
 j = 1
 odd_even = 0

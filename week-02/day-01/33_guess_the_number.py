@@ -6,11 +6,9 @@
 # The stried number is lower
 # You found the number: 8
 
-num1 = input("Enter a number: ")
-num1 = int(num1)
+num1 = int(input("Enter a number: "))
 
-num2 = input("Enter your tipp: ")
-num2 = int(num2)
+num2 = int(input("Enter your tipp: "))
 
 if num1 == num2:
     print("You found the number: ", num2)
