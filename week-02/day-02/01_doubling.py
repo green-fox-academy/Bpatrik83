@@ -6,6 +6,6 @@ ak = 123
 
 def doubling(ak):
   ak *= 2
-  print(ak)
+  return ak
 
-doubling(ak)
+print(doubling(ak))
