@@ -4,8 +4,8 @@
 
 ak = 123
 
-def doubling():
-  print(2*ak)
+def doubling(ak):
+  ak *= 2
+  print(ak)
 
-
-doubling()
+doubling(ak)
