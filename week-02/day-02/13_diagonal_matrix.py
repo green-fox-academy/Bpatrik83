@@ -11,13 +11,9 @@
 
 n = 4
 list_2d = [[0] * n for i in range(n)]
-
 for i in range(n):
     for j in range(n):
         if i == j:
             list_2d[i][j] = 1
-
-for i in range(n):
-    for j in range(n):
         print(list_2d[i][j], end=' ')
     print()

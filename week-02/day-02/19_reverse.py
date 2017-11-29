@@ -11,7 +11,7 @@ aj.reverse()
 
 rev_aj = []
 
-for i in range(len(aj)-1, -1, -1):
+for i in range(len(aj) - 1, -1, -1):
      rev_aj.append(aj[i])
 
 print(rev_aj)
