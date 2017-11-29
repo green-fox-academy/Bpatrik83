@@ -31,15 +31,18 @@ def transfer(acc_from, acc_to, amount):
             b = i
             test = True
     if test:
-        accounts[a]['balance'] -= amount
-        accounts[b]['balance'] -= amount
-        return "Transaction done!"
+        if accounts[a]['balance'] - amount < 0:
+            return "Not enough money!"
+        else:
+            accounts[a]['balance'] -= amount
+            accounts[b]['balance'] += amount
+            return "Transaction done!"
     else:
         message = "404 - account not found"
     return message
 
 
 print(nameBal(43546731))
-print(transfer(43546731, 11234543, 1))
+print(transfer(43546731, 11234543, 5204100071))
 for i in accounts:
     print(i)
