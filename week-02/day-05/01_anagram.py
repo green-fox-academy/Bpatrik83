@@ -11,8 +11,8 @@
 def input_values():
     in_one = input("Enter the first word: ")
     in_two = input("Enter the second word: ")
-    sorted_one = "".join(sorted(in_one.lower())).split()
-    sorted_two = "".join(sorted(in_two.lower())).split()
+    sorted_one = "".join(sorted(in_one))
+    sorted_two = "".join(sorted(in_two))
     return sorted_one, sorted_two
 
 def check_anagram(sorted_one, sorted_two):
@@ -21,4 +21,3 @@ def check_anagram(sorted_one, sorted_two):
     return False
 
 print(check_anagram(*input_values()))
-

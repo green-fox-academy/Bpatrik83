@@ -16,22 +16,22 @@
 # Print the result
 # Exit
 
-operation, operandA, operandB = input("Please type in the expression: ").split()
+operation, number_a, number_b = input("Please type in the expression (Examples: + 3 3) : ").split()
 
-operandA = int(operandA)
-operandB = int(operandB)
+number_a = int(number_a)
+number_b = int(number_b)
 
-def calculator(operation):
+def calculator(operation, number_a, number_b):
     if operation == "*":
-        result = operandA * operandB
+        result = number_a * number_b
     elif operation == "/":
-        result = operandA / operandB
+        result = number_a / number_b
     elif operation == "+":
-        result = operandA + operandB
+        result = number_a + number_b
     elif operation == "-":
-        result = operandA - operandB
+        result = number_a - number_b
     elif operation == "%":
-        result = operandA % operandB
-    print("Result = ", result)
+        result = operandA % number_b
+    return result
 
-calculator(operation)
+print(calculator(operation, number_a, number_b))

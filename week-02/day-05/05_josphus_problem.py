@@ -18,8 +18,8 @@ def josephus_problem(number):
     binary_number = bin(number)[2:]                         # 41 to binary equal 101001
     binary_number = "1" + "0" * (len(binary_number) - 1)    # change ones to zeros except the first
     binary_number = int(binary_number, 2)                   # 100000 to decimal equal 32
-    result = (2 * (number - int(binary_number)) + 1)        # solution formula
+    result = (2 * (number - binary_number) + 1)             # solution formula
     return result                                           # the result
 
-print(josephus_problem(41))                                  #input number 41
+print(josephus_problem(41))                                 # input number 41
 

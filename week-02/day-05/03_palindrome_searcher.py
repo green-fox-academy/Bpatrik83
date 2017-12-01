@@ -8,9 +8,6 @@
 #           "racecar" 	                        ["racecar", "aceca", "cec"]
 #           "" 	                                []
 
-
-
-
 def search_palindromes(input_text):
     list_palindromes = []
     for i in range(1, len(input_text) - 1):
@@ -30,7 +27,7 @@ def search_palindromes(input_text):
                     return list_palindromes
     return list_palindromes
 
-list_test =["dog goat dad duck doodle never", "apple", "racecar", "", "trart geekkeeg apple"]
+list_test =["dog goat dad duck doodle never", "apple", "racecar", "", "trart geekkeeg apple", "asdf 3 fdsa"]
 for i in list_test:
     print(search_palindromes(i))
 
