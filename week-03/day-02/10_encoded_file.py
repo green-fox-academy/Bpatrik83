@@ -1,18 +1,18 @@
 # Create a method that decrypts encoded-lines.txt
 def decrypt(file_name):
     try:
-        with open(file_name, "r") as f:
-            with open(file_encrypt, "w") as rev:
-                for lines in f:
-                    s = ""
-                    for i in lines:
-                        i = ord(i)
-                        if i != 32:
-                                i = chr(i - 1)
-                                s += i
+        with open(file_name, "r") as open_file:
+            with open(file_encrypt, "w") as write_file:
+                for lines in open_file:
+                    tmp_str = ""
+                    for char_i in lines:
+                        char_i = ord(char_i)
+                        if char_i != 32:
+                                char_i = chr(char_i - 1)
+                                tmp_str += char_i
                         else:
-                            s += " "
-                    rev.writelines(s + "\n")
+                            tmp_str += " "
+                    write_file.writelines(tmp_str + "\n")
         return "Reversing done!"
     except IOError:
         return "Unable to open file!"
