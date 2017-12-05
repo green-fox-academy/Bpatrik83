@@ -12,7 +12,7 @@ def decrypt(file_name):
                                 s += i
                         else:
                             s += " "
-                    print(s)
+                    rev.writelines(s + "\n")
 
         return "Reversing done!"
 
