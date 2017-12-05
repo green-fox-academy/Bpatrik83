@@ -8,7 +8,6 @@ def write_line(file_name):
         with open(file_name, "w") as f:
             f.writelines("Patrik_Bikes")
         return "File write done!"
-
     except IOError:
         return "Unable to write file: my-file.txt"
 

@@ -9,12 +9,9 @@ def order_lines(file_order):
                 s[0] += "\n"
                 for i in range(len(s)):
                     rev.writelines(s[i])
-
         return "Ordered done!"
-
     except IOError:
         return "Unable to open file!"
-
 
 file_order = "reversed-order.txt"
 file_reversed = "order-done.txt"

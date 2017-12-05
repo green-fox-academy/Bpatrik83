@@ -5,15 +5,11 @@ def decrypt(file_rev):
         with open(file_rev, "r") as f:
             with open(file_reversed, "w") as rev:
                 text = f.readlines()
-                text.remove("\n")
                 for i in text:
-                    i[:2].replace("\n", "")
-                    rev.write(i[::-1])
+                    rev.write(i[0:-1][::-1] + "\n")
         return "Reversing done!"
-
     except IOError:
         return "Unable to open file!"
-
 
 file_rev = "reversed-lines.txt"
 file_reversed = "reverse-done.txt"

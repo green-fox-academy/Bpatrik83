@@ -13,12 +13,9 @@ def decrypt(file_name):
                         else:
                             s += " "
                     rev.writelines(s + "\n")
-
         return "Reversing done!"
-
     except IOError:
         return "Unable to open file!"
-
 
 file_name = "encoded-lines.txt"
 file_encrypt = "encoded_done.txt"

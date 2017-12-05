@@ -7,7 +7,6 @@ def read_lines(file_name):
     try:
         with open(file_name) as f:
             return f.read()
-
     except IOError:
         return "Unable to read file: ", file_name
 

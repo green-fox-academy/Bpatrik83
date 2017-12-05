@@ -13,7 +13,6 @@ def multiple_line(path, word, number):
             for i in range(number):
                 f.writelines("word\n")
         return "File write done!"
-
     except IOError:
         return "Unable to write file: my-file.txt"
 
