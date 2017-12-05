@@ -6,7 +6,7 @@
 def count_lines(file_name):
     try:
         with open(file_name) as f:
-            count = 0
+            count = 1
             for i in enumerate(f):
                 count += 1
             return count
