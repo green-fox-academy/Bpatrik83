@@ -2,18 +2,25 @@ from tkinter import *
 
 root = Tk()
 
-canvas = Canvas(root, width="1000", height="1300")
+canvas = Canvas(root, width="400", height="600")
 canvas.pack()
 
 # reproduce this:
 # [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/triangles/r5.png]
 
-def draw_triangles(x):
-    black_line = canvas.create_line(500 + x, 80 + x, 280 + x * 2, 300, fill="black")
-    black_line = canvas.create_line(490 - x - 10, 100 + x, 510 + x + 10, 100 + x, fill="black")
-    black_line = canvas.create_line(500 - x, 80 + x, 720 - x * 2, 300, fill="black")
+def draw_triangles(x, y):
+    black_line = canvas.create_line(x, y, x + 7.5, y + 15, fill="black")
+    black_line = canvas.create_line(x, y, x - 7.5, y + 15, fill="black")
+    black_line = canvas.create_line(x - 7.5, y + 15, x + 7.5, y + 15, fill="black")
 
-for x in range(0, 220, 20):
-    draw_triangles(x)
+x = 200
+y = 100
 
+for i in range(25):
+    y += 15
+    x -= 7.5
+    for j in range(i):
+        x += 15
+        draw_triangles(x, y)
+    x -= i * 15
 root.mainloop()
