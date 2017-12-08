@@ -4,15 +4,14 @@ my_turtle = turtle.Turtle(shape = "turtle")
 canvas = turtle.Screen()
 my_turtle.speed(0)
 my_turtle.penup()
-my_turtle.setposition(0, 0)
+my_turtle.setposition(-300, -300)
 my_turtle.pendown()
-my_turtle._tracer(0,0)
 
 def triangles(size, n):
     if n == 0:
         for i in range(0, 3):
             my_turtle.forward(size)
-            my_turtle.left(140)
+            my_turtle.left(120)
     else:
         triangles(size / 2, n - 1)
         my_turtle.forward(size / 2)
@@ -27,9 +26,8 @@ def triangles(size, n):
         my_turtle.right(60)
 
 
-size = 500
-n = 3
+size = 400
+n = 4
 
 triangles(size, n)
-canvas.update()
 canvas.exitonclick()
