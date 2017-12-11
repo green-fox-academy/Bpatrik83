@@ -1,10 +1,30 @@
 class Animal(object):
-    def __init__(self, hunger, thirst):
-        self.hunger = hunger
-        self.thirst = thirst
+    def __init__(self, name):
+        self.animal = name
+        self.hunger = 50
+        self.thirst = 50
 
-    postit1 = Postit("orange", "Idea 1", "blue")
-    postit2 = Postit("pink", "Awsome", "black")
-    postit3 = Postit("yellow", "Superb!", "green")
+    def eat(self):
+        self.hunger -= 1
 
-    print(postit1.text, postit1.background_color, postit1.text_color)
+    def drink(self):
+        self.thirst -= 1
+
+    def play(self):
+        self.hunger += 1
+        self.thirst += 1
+    def __str__(self):
+        return '[Race: {}, Hunger level: {}, Thirst level {}]'.format(self.animal, self.hunger, self.thirst)
+
+
+lion = Animal("Lion")
+lion.drink()
+lion.eat()
+lion.drink()
+lion.eat()
+lion.drink()
+lion.eat()
+print(lion)
+lion.play()
+lion.play()
+print(lion)
