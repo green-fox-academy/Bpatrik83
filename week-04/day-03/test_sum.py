@@ -1,7 +1,7 @@
 import unittest
 from summa import sum_numbers
 
-class TestCounter(unittest.TestCase):
+class TestSum(unittest.TestCase):
     def test_sum_an_empty_list(self):
         self.assertEqual(sum_numbers([]), 0)
 

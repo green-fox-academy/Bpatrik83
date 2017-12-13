@@ -1,7 +1,7 @@
 import unittest
 from anagram import check_anagram
 
-class TestCounter(unittest.TestCase):
+class TestAngram(unittest.TestCase):
     def test_is_empty(self):
         self.assertEqual(check_anagram("", ""), True)
 

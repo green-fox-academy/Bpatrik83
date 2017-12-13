@@ -1,7 +1,7 @@
 import unittest
 from apple import Apple
 
-class test_apple(unittest.TestCase):
+class TestApple(unittest.TestCase):
     def setUp(self):
         self.apple = Apple()
 
