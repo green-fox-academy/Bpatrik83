@@ -22,12 +22,15 @@ class CandyShop():
         self.amount_of_sugar = amount_of_sugar
         self.dictionary_of_sweets = {}
         self.income = 0
+        self.list_of_sweets = []
+
+    def put_sweets_to_list(self, sweets):
+        self.list_of_sweets.append(sweets)
 
     def check_sweet(self, type_of_sweet):
-        if type_of_sweet == "candy":
-            return candy
-        elif type_of_sweet == "lollipop":
-            return lollipop
+        for item in self.list_of_sweets:
+            if item.name == type_of_sweet:
+                return item
 
     def create_sweets(self, type_of_sweet):
         if type_of_sweet not in self.dictionary_of_sweets:
@@ -63,6 +66,10 @@ candy = Sweets("candy", 20, 10)
 lollipop = Sweets("lollipop", 10, 5)
 
 candy_shop = CandyShop(300)
+
+candy_shop.put_sweets_to_list(candy)
+candy_shop.put_sweets_to_list(lollipop)
+
 candy_shop.create_sweets("candy")
 candy_shop.create_sweets("candy")
 candy_shop.create_sweets("lollipop")

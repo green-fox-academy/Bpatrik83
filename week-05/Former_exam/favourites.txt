@@ -2,3 +2,5 @@ kutya
 kacsa
 kecske
 diszno
+medve
+gyik

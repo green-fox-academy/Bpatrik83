@@ -11,8 +11,8 @@
 from sys import argv
 
 class Favourite:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, file_name):
+        self.file_name = file_name
         if len(argv) == 1:
             self.print_usage()
         elif len(argv) > 1:
@@ -26,13 +26,10 @@ class Favourite:
             self.write_file(argv[i])
 
     def write_file(self, argument):
-        fw = open(self.name, "r")
-        lines = fw.readlines()
-        fw.close()
-        fw = open(self.name, "a")
-        if argument + "\n" not in lines:
-            fw.write(argument + "\n")
-        fw.close()
-
+        with open(self.file_name, "r") as file_open:
+            lines = file_open.readlines()
+            file_open = open(self.file_name, "a")
+            if argument + "\n" not in lines:
+                file_open.write(argument + "\n")
 
 favourite = Favourite("favourites.txt")
