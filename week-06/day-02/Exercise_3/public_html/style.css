@@ -1,0 +1,15 @@
+.container {
+    height: 383px;
+    width: 1029px;
+    background: #ffd62a;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.purple {
+    height: 145px;
+    width: 145px;
+    background: #b02aff;
+    margin-left: 5px;
+}
