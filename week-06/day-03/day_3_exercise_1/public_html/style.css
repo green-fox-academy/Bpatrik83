@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: #3d92e9;
+}
+
+thead th {
+    background-color: #000000;
+    font-family: Arial Narrow, Arial, sans-serif;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-style: normal;
+    padding: 20px;
+    text-align: left;
+}
+
+th:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+th:nth-child(2) {
+    border-radius: 0 6px 0 0;
+}
+
+.last_value{
+    border-radius: 0 0 6px 0;
+}
+
+.last_month {
+    border-radius: 0 0 0 6px;
+}
+
+table td, th {
+    padding: 1rem;
+    border: 1px solid #9ea7af;
+    width: 500px;
+     
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+td {
+    font-family: Arial Narrow, Arial, sans-serif;
+    color: #9ea7af;
+    font-size: 26px;
+    font-style: normal;
+    padding: 20px 400px 20px 20px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+tr:nth-child(2n + 1) > td {
+    background-color: #ebebeb;
+}
+
+tr:nth-child(2n) > td {
+    background-color: #ffffff;
+}

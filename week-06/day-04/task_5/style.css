@@ -1,0 +1,134 @@
+.content {
+    display: grid;
+    height: 94vh;
+    grid-template-columns:repeat(7, 1fr);
+    margin: 0 auto;
+    grid-gap: 1px;
+    background: black;
+    grid-template-areas: 
+    "one two three four five six seven"
+    "eight main main main main main nine"
+    "ten main main main main  main eleven"
+    "twelve main main main main main threeteen"
+    "fourteen main main main main main fifteen"
+    "sixteen seventeen eighteen nineteen twenty twenty_one twenty_two" 
+}
+
+.yellow {
+    background: yellow;
+}
+
+.yellow, .main {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    background: green;
+    grid-area: main;
+}
+
+.cards {
+    background: purple;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+
+.jail_png:hover {
+    z-index: -1;
+}
+
+.jail_gif:hover {
+    z-index: 1;
+}
+
+.start_png:hover {
+    z-index: -1;
+}
+
+.start_gif:hover {
+    z-index: 1;
+}
+
+.pub_png:hover {
+    z-index: -1;
+}
+
+.pub_gif:hover {
+    z-index: 1;
+}
+
+.hospital_png:hover {
+    z-index: -1;
+}
+
+.hospital_gif:hover {
+    z-index: 1;
+}
+
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.ten {
+    grid-area: ten
+}
+.eleven {
+    grid-area: eleven;
+}
+.twelve {
+    grid-area: twelve;
+}
+.threeteen {
+    grid-area: threeteen;
+}
+.fourteen {
+    grid-area: fourteen;
+}
+.fifteen {
+    grid-area: fifteen;
+}
+.sixteen {
+    grid-area: sixteen;
+}
+.seventeen {
+    grid-area: seventeen;
+}
+.eighteen {
+    grid-area: eighteen;
+}
+.nineteen {
+    grid-area: nineteen;
+}
+.twenty {
+    grid-area: twenty;
+}
+.twenty_one {
+    grid-area: twenty_one;
+}
+.twenty_two {
+    grid-area: twenty_two;
+}

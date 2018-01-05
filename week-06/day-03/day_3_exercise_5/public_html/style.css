@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333333;
+    width: 950px;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.border {
+    position: absolute;
+    background: transparent;
+    border-radius: 4px;
+    border: 2px solid red;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    transform: rotate(45deg);
+    background: white;
+}
+
+p {
+    transform: rotate(-45deg);
+    color: #333333;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.border:hover {
+    transform: rotate(45deg);
+}
+
+.border:hover + .hover p {
+    color: red;
+}

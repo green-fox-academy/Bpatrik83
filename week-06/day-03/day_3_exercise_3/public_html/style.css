@@ -1,0 +1,63 @@
+.button {
+    border-bottom-width: 5px;
+    min-width: 175px;
+    height: 75px;
+    margin: 60px;
+    font-family: sans-serif;
+    font-size: 22px;
+    color: white;
+    border-radius: 6px;
+}
+
+.blue {
+    background: rgb(65, 94, 158);
+    border-color: rgb(65, 94, 158);
+}
+
+.green {
+    background: rgb(27, 170, 87);
+    border-color: rgb(27, 170, 87);
+}
+
+.red {
+    background: rgb(211, 66, 50);
+    border-color: rgb(211, 66, 50);
+}
+
+.light {
+    background: rgb(1, 173, 237);
+    border-color: rgb(1, 173, 237);
+}
+
+.black {
+    background: rgb(40, 41, 43);
+    border-color: rgb(40, 41, 43);
+}
+
+.white {
+    background: rgb(237, 240, 249);
+    border-color: rgb(237, 240, 249);
+    color: black;
+}
+
+.button:hover {
+    filter:brightness(110%);
+}
+
+.button:active {
+    filter:brightness(90%);
+}
+
+.container {
+    background: rgb(47, 48, 96);
+    width: 950px;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}

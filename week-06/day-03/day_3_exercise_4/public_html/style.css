@@ -1,0 +1,66 @@
+body {
+    height: 500px;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    position: fixed;
+}
+
+i {
+    position: absolute;
+    left: 8px;
+}
+
+.trash {
+    width: 54px;
+    height: 52px;
+    color: white;
+    border-radius: 4px;
+    background: #000000;
+}
+
+.trash:hover, .container:hover {
+    color: red;
+    border-radius: 6px 0 0 6px;
+}
+
+.trash:hover + .arrow-right {
+    right: -8px;
+}
+
+.container:hover > .delete {
+    right: -120px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.arrow-right {
+    z-index: -1;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #000000;
+    background: transparent;
+    position: absolute;
+    right: 0px;
+    transition: 1s;
+}
+
+.delete {
+    z-index: -2;
+    background: red;
+    color: white;
+    position: absolute;
+    right: 4px;
+    transition: 1s;
+}
