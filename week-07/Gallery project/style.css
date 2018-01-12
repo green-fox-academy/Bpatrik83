@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    background-image: url(imgs/main_background.jpg);
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(4, 1fr);
+    width: 99%;
+    height: 680px;
+    grid-template-areas:
+            '. . .'
+            '. main .'
+            '. main2 .'
+            '. . .'
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+main {
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0px 2px 84px -14px rgba(0,0,0,1.5);
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 920px;
+    height: 430px;
+    border-radius: 20px;
+    grid-area: main;
+    grid-template-areas:
+            '. mainPicture .'
+            'leftButton mainPicture rightButton'
+            ' . mainPicture .'
+}
+
+.mainPic {
+    min-width: 800px;
+    height: 100%;
+    width: 100%;
+    grid-area: mainPicture;
+}
+
+.left {
+    grid-area: leftButton;
+}
+
+.right {
+    grid-area: rightButton;
+}
+
+section {
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: transparent;
+    height: 140px;
+    width: 100%;
+    grid-area: main2;
+    margin-top: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+h1, p {
+    color: #ffffff;
+    text-align: left;
+    margin: 0;
+}
+
+h1 {
+    padding-top: 8px;
+}
+
+p {
+    padding: 5px;
+}
+
+.pic:focus {outline:0;}
+
+.pic {
+    margin: 20px 15px 20px 15px;
+    background-clip: border-box;
+    background-size: 120px 90px;
+    width: 90px;
+    height: 65px;
+    border: 3px solid #ffffff;
+    border-radius: 6px;
+    transition: 1s;
+    box-shadow: 0px 2px 84px -14px rgba(0,0,0,1.5);
+}
+
+.pic:hover::before {
+    content: attr(tooltip);
+    display: block;
+    position: relative;
+    top: -66px;
+    background-color: black;
+    color: white;
+    height: 20px;
+    opacity: 0.5;
+    border-radius: 6px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.button {
+    color: #cecece;
+    transition: 1s;
+}
+
+.button:hover {
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0px 2px 84px -14px rgba(0,0,0,0.75);
+}
+
+.pic:hover, .grow {
+    width: 120px;
+    height: 90px;
+    cursor: pointer;
+    box-shadow: 0px 2px 84px 21px rgba(255,255,255,1);
+}
+
+.bigPic {
+    position: relative;
+    background-size: 800px 390px;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+}
