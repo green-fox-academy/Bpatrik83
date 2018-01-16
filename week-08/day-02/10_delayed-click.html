@@ -14,11 +14,9 @@
     function showText() {
         document.querySelector('body').innerHTML = `<p>2 seconds ellapsed</p>`
     }
+    let timeOut = function() {setTimeout(function() { showText(); }, 2000);}
 
-    setTimeout(function() {
-        showText();
-    }, 2000);
-
+    document.querySelector('button').onclick = timeOut;
 
 </script>
 </body>
