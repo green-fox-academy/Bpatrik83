@@ -1,0 +1,16 @@
+body {
+    width: 920px;
+    margin: 0 auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    max-width: 920px;
+    grid-gap: 5px;
+}
+
+div, img {
+    width: 100px;
+    height: 100px;
+}
