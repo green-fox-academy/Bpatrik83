@@ -27,8 +27,20 @@ app.get('/doubling', function (req, res) {
   }
 });
 
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
+app.get('/greeter', function (req, res) {
+  if (typeof req.query.name !== 'undefined' && typeof req.query.title !== 'undefined') {
+    res.json({
+      "welcome_message": `Oh, hi there ${req.query.name}, my dear ${req.query.title}!`
+    });
+  } else if(typeof req.query.name === 'undefined' && typeof req.query.title === 'undefined') {
+    res.json({
+      "error": "Please provide a name!"
+    });
+  } else {
+    res.json({
+      "error": "Please provide a title!"
+    });
+  }
 });
 
 app.listen(8080, function () {
