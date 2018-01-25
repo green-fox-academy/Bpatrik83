@@ -14,7 +14,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/doubling', function (req, res) {
-  console.log(req.query.input);
   if (typeof req.query.input !== 'undefined') {
     res.json({
       "received": Number(req.query.input),
@@ -64,8 +63,6 @@ function numberSum(number) {
     return (number + numberSum(number - 1));
   }
 }
-
-console.log(numberSum(7));
 
 function factorialize(number) {
   if (number < 0)
