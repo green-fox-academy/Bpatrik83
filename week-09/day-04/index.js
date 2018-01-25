@@ -32,7 +32,7 @@ app.get('/greeter', function (req, res) {
     res.json({
       "welcome_message": `Oh, hi there ${req.query.name}, my dear ${req.query.title}!`
     });
-  } else if(typeof req.query.name === 'undefined' && typeof req.query.title === 'undefined') {
+  } else if (typeof req.query.name === 'undefined' && typeof req.query.title === 'undefined') {
     res.json({
       "error": "Please provide a name!"
     });
@@ -48,6 +48,34 @@ app.get('/appenda/:data', function (req, res) {
     "appended": `${req.params.data}a`
   });
 });
+
+app.post('/dountil/:data', function (req, res) {
+  if (req.params.data === 'sum') {
+    res.json({"result": numberSum(req.body.until)});
+  } else if (req.params.data === 'factor') {
+    res.json({"result": factorialize(req.body.until)});
+  }
+});
+
+function numberSum(number) {
+  if (number <= 0)
+    return 0;
+  else {
+    return (number + numberSum(number - 1));
+  }
+}
+
+console.log(numberSum(7));
+
+function factorialize(number) {
+  if (number < 0)
+    return -1;
+  else if (number == 0)
+    return 1;
+  else {
+    return (number * factorialize(number - 1));
+  }
+}
 
 app.listen(8080, function () {
   console.log('the app is running');
