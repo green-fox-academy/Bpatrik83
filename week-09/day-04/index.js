@@ -7,11 +7,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/assets', express.static('assets'));
-
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
-});
 
 app.get('/doubling', function (req, res) {
   if (typeof req.query.input !== 'undefined') {

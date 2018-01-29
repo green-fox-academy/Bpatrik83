@@ -1,6 +1,6 @@
 'use strict';
 
-function requestReddit(url) {
+function requestReddit(url, callback) {
   let request = new XMLHttpRequest();
   request.open('GET', url);
   request.onerror = () => {
@@ -8,28 +8,30 @@ function requestReddit(url) {
   }
   request.send();
   request.onload = () => {
-    request.status === 200 ? loadPost(JSON.parse(request.responseText).posts) : console.log('Status not 200!');
+    request.status === 200 ? callback(JSON.parse(request.responseText), createElement) : console.log('Status not 200!');
   };
 }
 
 function connection(method, url) {
+
   let xhr = new XMLHttpRequest();
   xhr.open(method, url);
-  xhr.setRequestHeader("Content-type", "application/json");
   xhr.onreadystatechange = function () {
-    xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200 ? changeDatas(JSON.parse(xhr.responseText), method) : console.log('We have some problem :( !');
+    xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200 ? changeDatas(xhr.responseText, method) : console.log('We have some problem :( !');
   }
   xhr.send();
 }
 function changeDatas(data, method) {
-  method === 'PUT' ? document.querySelector(`var[data-id="${data.id}"]`).innerHTML = `${data.score}` :
-    document.querySelector(`.section${data.id}`).remove();
+  console.log(document.querySelector(`var[data-id="${data}"]`));
+  method === 'PUT' ? document.querySelector(`var[data-id="${data}"]`).innerHTML = `${data.score}` :
+    document.querySelector(`.section${data}`).remove();
 }
 
-function loadPost(data) {
+function loadPost(data, callback) {
+  console.log(data);
   let article = document.querySelector('article');
   data.forEach(function (item) {
-    article.insertBefore(createElement(item), article.firstChild);
+    article.insertBefore(callback(item, createDomString), article.firstChild);
     upVote(item.id);
     downVote(item.id);
     deleteButton(item.id);
@@ -37,7 +39,8 @@ function loadPost(data) {
 }
 
 function createDomString(item) {
-  let domString = `
+
+  return domString;let domString = `
     <div class="buttons">
       <button class="buttonUp ${item.id}"></button>
       <var data-id="${item.id}" class="counter">${item.score}</var>
@@ -48,31 +51,30 @@ function createDomString(item) {
       <a href="${item.url}">${item.url}</a>
       <p><span>${item.owner}</span><span class="date"> ${convertTime(item.timestamp)}</span><span class="delete"> delete</span></p>
     </div>`;
-  return domString;
 }
 
-function createElement(item) {
+function createElement(item, callback) {
   let post = document.createElement('section');
   post.setAttribute('class', `post section${item.id}`);
-  post.innerHTML = createDomString(item);
+  post.innerHTML = callback(item);
   return post;
 }
 
 function deleteButton(itemId) {
   document.querySelector('.delete').addEventListener('click', function () {
-    connection('DELETE', `https://time-radish.glitch.me/posts/${itemId}`);
+    connection('DELETE', `${url}/delete/${itemId}`);
   });
 }
 
 function upVote(itemId) {
   document.querySelector('.buttonUp').addEventListener('click', function () {
-    connection('PUT', `https://time-radish.glitch.me/posts/${itemId}/upvote`);
+    connection('PUT', `${url}/upvote/${itemId}`);
   });
 }
 
 function downVote(itemId) {
   document.querySelector('.buttonDown').addEventListener('click', function () {
-    connection('PUT', `https://time-radish.glitch.me/posts/${itemId}/downvote`);
+    connection('PUT', `${url}/downvote/${itemId}`);
   });
 }
 
@@ -84,4 +86,6 @@ function convertTime(timestamp) {
   return `${weekday[pubDate.getDay()]}, ${monthname[pubDate.getMonth()]}, ${pubDate.getDate()}, ${pubDate.getUTCFullYear()}`;
 }
 
-requestReddit('https://time-radish.glitch.me/posts');
+const url = 'http://localhost:8080';
+
+requestReddit(url, loadPost);
