@@ -1,0 +1,140 @@
+body {
+  margin: auto 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+main {
+  width: 602px;
+  min-width: 602px;
+  margin-top: 100px;
+  height: 100%;
+  border: solid 3px;
+  border-radius: 4px;
+  background: -webkit-linear-gradient(-45deg, rgba(34, 36, 104, 1) 9%, rgba(17, 18, 51, 1) 16%, rgba(39, 41, 119, 1) 21%, rgba(29, 30, 89, 1) 30%, rgba(11, 11, 33, 1) 51%, rgba(34, 36, 104, 1) 89%, rgba(16, 17, 50, 1) 95%, rgba(27, 28, 83, 1) 98%, rgba(17, 18, 51, 1) 100%, rgba(7, 8, 23, 1) 100%);
+  background: -moz-linear-gradient(-45deg, rgba(27, 28, 81, 1) 9%, rgba(13, 14, 41, 1) 16%, rgba(31, 32, 93, 1) 21%, rgba(23, 24, 69, 1) 30%, rgba(8, 9, 26, 1) 51%, rgba(27, 28, 81, 1) 89%, rgba(13, 13, 39, 1) 95%, rgba(21, 22, 65, 1) 98%, rgba(13, 14, 41, 1) 100%, rgba(6, 6, 18, 1) 100%);
+}
+
+.left, .right, .dataBox, .logoNotification, .playlist, .upRightBox {
+  background-color: transparent;
+}
+
+.left {
+  height: 325px;
+  float: left;
+  border: solid 1px blue;
+}
+
+.right {
+  height: 325px;
+  float: right;
+  overflow: scroll;
+}
+
+.box {
+  min-width: 300px;
+}
+
+audio {
+  width: 100%;
+  display: block;
+}
+
+.logoNotification {
+  float: left;
+  width: 50%;
+  height: 100px;
+}
+
+.audioInformation {
+  display: grid;
+  float: left;
+  width: 80%;
+  height: 100px;
+  color: #2a53fc;
+}
+
+.music {
+  width: 300px;
+  height: 100px;
+}
+
+button {
+  margin: 0;
+}
+
+.player {
+  width: 600px;
+  height: 30px;
+  display: inline-flex;
+}
+
+.albumPic {
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+
+.dataBox {
+  display: flex;
+  border: solid 1px #2a53fc;
+  height: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pushed, .pushed > p {
+  background: -webkit-linear-gradient(-45deg, rgba(70, 72, 194, 1) 9%, rgba(49, 51, 149, 1) 16%, rgba(85, 87, 199, 1) 21%, rgba(61, 63, 185, 1) 30%, rgba(43, 45, 131, 1) 51%, rgba(70, 72, 194, 1) 89%, rgba(49, 50, 147, 1) 95%, rgba(59, 61, 179, 1) 98%, rgba(49, 51, 149, 1) 100%, rgba(40, 41, 120, 1) 100%);
+  background: -moz-linear-gradient(-45deg, rgba(78, 80, 196, 1) 9%, rgba(52, 54, 158, 1) 16%, rgba(91, 93, 201, 1) 21%, rgba(64, 66, 192, 1) 30%, rgba(47, 48, 141, 1) 51%, rgba(78, 80, 196, 1) 89%, rgba(52, 54, 156, 1) 95%, rgba(62, 64, 186, 1) 98%, rgba(52, 54, 158, 1) 100%, rgba(43, 45, 131, 1) 100%);
+  font-size: 14px;
+  color: white;
+}
+
+.dataBox:hover {
+  cursor: pointer;
+}
+
+p {
+  font-size: 11px;
+  margin: 0;
+  width: 100%;
+  pointer-events: none;
+  color: blue;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+.playlist {
+  font-size: 22px;
+}
+
+.addPlaylist, .favorite {
+  position: relative;
+  margin-top: 40px;
+  float: right;
+  width: 20px;
+  height: 20px;
+}
+
+.upRightBox {
+  float: right;
+  width: 50%;
+  height: 100px;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}

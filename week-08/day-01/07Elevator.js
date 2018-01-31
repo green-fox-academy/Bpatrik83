@@ -23,9 +23,6 @@ class ElevatorController {
         this.buttonUp.onclick = this.moveUp.bind(this);
         this.buttonDown.onclick = this.moveDown.bind(this);
     }
-
-
-
 }
 
 class ElevatorModel {
