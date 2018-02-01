@@ -50,6 +50,7 @@ app.post('/posts', function (req, res) {
   }
 );
 
+
 app.delete('/delete/:data', function (req, res) {
     conn.query(`DELETE FROM posts WHERE id = ?`, [req.params.data], function (err, rows) {
     });

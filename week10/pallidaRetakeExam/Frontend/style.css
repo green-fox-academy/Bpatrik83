@@ -1,0 +1,12 @@
+.ok {
+  background-color: #31ff13;
+}
+
+.error {
+  background-color: red;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

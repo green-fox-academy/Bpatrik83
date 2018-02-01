@@ -93,4 +93,4 @@ function showAlbumList(datas) {
   showAllDataByAudio(datas);
 }
 
-connnect('', showAlbumList);
+
