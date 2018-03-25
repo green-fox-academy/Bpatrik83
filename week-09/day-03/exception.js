@@ -5,9 +5,10 @@
 // It should add the strings too if the arguments are appropriate.
 
 let  addString = function(str1, str2, printStr){
-  if (typeof a !== 'String'){
+  console.log(typeof str1);
+  if (typeof str1 != 'string'){
     throw new Error('"str1" is not a String');
-  } else if (typeof b !== 'String'){
+  } else if (typeof str2 !== 'string'){
     throw new Error('"str2" is not a String');
   }
   let newStr = str1 + str2;
@@ -19,7 +20,7 @@ let printStr = function(str) {
 }
 
 try {
-  addString(1234, 56789, 'printStr');
+  addString('sah', 'ads', 'printStr');
 } catch (err) {
   console.log('catching error:');
   console.log(err.message);
